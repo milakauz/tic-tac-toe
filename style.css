@@ -1,0 +1,32 @@
+body {
+    background-color: #323232;
+    /* Hintergrundfarbe der gesamten Seite */
+    font-family: 'Open Sans', sans-serif;
+    /* Schriftart */
+    color: white;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 36px;
+    cursor: pointer;
+    border: 5px solid white;
+}
