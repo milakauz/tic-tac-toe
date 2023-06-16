@@ -52,30 +52,26 @@ function render() {
     content.innerHTML = '';
     content.appendChild(table);
   }
-
+  
   function generateCircleSVG() {
     const color = '#00B0EF';
     const size = 70;
+    const borderWidth = 5;
     const animationDuration = 125; // Animation in Millisekunden
+    const animationRepeatCount = 'indefinite'; // Wiederholung der Animation
+  
+    const innerSize = size - 2 * borderWidth; // Größe des inneren Kreises
   
     const svgCode = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}">
-      <circle cx="${size / 2}" cy="${size / 2}" r="0" fill="${color}" transform-origin="center" style="transform-box: fill-box; animation: fillAnimation ${animationDuration}ms ease-in-out forwards">
-        <animate attributeName="r" from="0" to="${size / 2}" dur="${animationDuration}ms" fill="freeze" />
+      <circle cx="${size / 2}" cy="${size / 2}" r="${innerSize / 2}" fill="none" stroke="${color}" stroke-width="${borderWidth}">
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 ${size / 2} ${size / 2}" to="360 ${size / 2} ${size / 2}" dur="${animationDuration}ms" repeatCount="${animationRepeatCount}" />
       </circle>
-      <style>
-        @keyframes fillAnimation {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      </style>
     </svg>`;
   
     return svgCode;
   }
+  
+  
 
   function generateCrossSVG() {
     const color = '#FFC000';
