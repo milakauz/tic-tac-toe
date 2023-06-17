@@ -6,6 +6,7 @@ body {
     color: white;
     margin: 0;
 }
+
 h1 {
     text-align: center;
 }
@@ -14,7 +15,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 250px;
 }
 
 table {
@@ -29,4 +30,46 @@ td {
     font-size: 36px;
     cursor: pointer;
     border: 5px solid white;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #104254;
+    color: rgb(241, 238, 250);
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #1e96be;
+    box-shadow: 0 0 10px 2px silver;
 }
